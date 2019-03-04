@@ -1,6 +1,6 @@
 {
   "name": "gltf-webpack-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A gltf loader module for webpack",
   "license": "MIT",
   "repository": "mientjan/gltf-webpack-loader",
@@ -52,7 +52,10 @@
     "webpack": "^4.5.0"
   },
   "keywords": [
-    "webpack", "gltf", "three", "loader"
+    "webpack",
+    "gltf",
+    "three",
+    "loader"
   ],
   "babel": {
     "presets": [
