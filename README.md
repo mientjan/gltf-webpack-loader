@@ -9,6 +9,36 @@ This loader still does not work with the public path. We dont have a idea how to
 
 Usage
 
+#### Webpack
+```
+{
+    module:{
+      rules:[
+        {
+          test: /\.(gltf)$/,
+          use: [
+            {
+              loader: "gltf-webpack-loader"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      test: /\.(bin)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {}
+        }
+      ]
+    }
+}
+```
+
+
+#### Project
 ```js
 import * as THREE from 'three';
 import GLTFLoader from 'three-gltf-loader';
