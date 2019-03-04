@@ -65,8 +65,7 @@ module.exports = function WebpackGLTFLoader(content) {
     if (!isExternalURL(value) && isFileUrl(value)) {
       if (!/^(\.\/|\.\.\/)/.test(value)) {
         value = `./${value}`;
-      } // var url = loaderUtils.urlToRequest(`file-loader!${value}`);
-
+      }
 
       completeResolve.push(new Promise(resolve => {
         this.loadModule(`${value}`, (err, result, sourceMap, module) => {
@@ -76,7 +75,6 @@ module.exports = function WebpackGLTFLoader(content) {
             obj[key] = match[1];
           }
 
-          console.log(module);
           resolve(match);
         });
       }));
