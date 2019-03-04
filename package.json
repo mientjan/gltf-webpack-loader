@@ -52,7 +52,7 @@
     "webpack": "^4.5.0"
   },
   "keywords": [
-    "webpack", "gltf", "three"
+    "webpack", "gltf", "three", "loader"
   ],
   "babel": {
     "presets": [
