@@ -1,6 +1,6 @@
 # gltf-webpack-loader
 
-This is a gltf webpack loader, tested on three.js.
+This is a gltf webpack loader, tested on three.js. Automatically bundles all referenced files.
 
 This loader will resolve all the files referenced in the .gltf file and change their urls depending on the loaders you have defined for these files.
 Files defined in the .gltf file __must__ be relative to the .gltf file.
