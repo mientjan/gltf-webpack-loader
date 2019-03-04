@@ -10,8 +10,8 @@ This loader still does not work with the public path. We dont have a idea how to
 ### Usage
 
 #### Webpack
-```
-{
+```js
+const config = {
     module:{
       rules:[
         {
