@@ -1,5 +1,6 @@
 const loaderUtils = require('loader-utils');
 const validateOptions = require('schema-utils');
+const path = require('path');
 const schema = require('./options.json');
 
 const regExternal = /^https?:\/\//;
@@ -57,9 +58,6 @@ module.exports = function WebpackGLTFLoader(content) {
 
 	let outputPath = url;
 
-	// let ruuid = Date.now();
-	// const replaceItems = [];
-
 	const completeResolve = [];
 
 
@@ -76,7 +74,7 @@ module.exports = function WebpackGLTFLoader(content) {
 					const match = /"([\w\W]+)"/.exec(result);
 
 					if(match && match.length > 1){
-						obj[key] = match[1];
+            obj[key] = path.relative(path.dirname(url), match[1]);
 					}
 
 					resolve(match);
