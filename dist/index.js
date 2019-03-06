@@ -4,6 +4,8 @@ const loaderUtils = require('loader-utils');
 
 const validateOptions = require('schema-utils');
 
+const path = require('path');
+
 const schema = require('./options.json');
 
 const regExternal = /^https?:\/\//;
@@ -57,9 +59,7 @@ module.exports = function WebpackGLTFLoader(content) {
     regExp: options.regExp
   });
   content = typeof content === 'string' ? JSON.parse(content) : content;
-  let outputPath = url; // let ruuid = Date.now();
-  // const replaceItems = [];
-
+  let outputPath = url;
   const completeResolve = [];
   deepReplace(content, (obj, key, value) => {
     if (!isExternalURL(value) && isFileUrl(value)) {
@@ -72,7 +72,7 @@ module.exports = function WebpackGLTFLoader(content) {
           const match = /"([\w\W]+)"/.exec(result);
 
           if (match && match.length > 1) {
-            obj[key] = match[1];
+            obj[key] = path.relative(path.dirname(url), match[1]);
           }
 
           resolve(match);
