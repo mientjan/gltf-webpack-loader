@@ -7,6 +7,12 @@ Files defined in the .gltf file __must__ be relative to the .gltf file.
 
 This loader still does not work with the public path. We dont have a idea how to solve that.
 
+### Install
+```js
+npm install gltf-webpack-loader -S
+yarn add gltf-webpack-loader
+```
+
 ### Usage
 
 #### Webpack
