@@ -47,7 +47,7 @@
     "lint-staged": "^8.1.0",
     "memory-fs": "^0.4.0",
     "prettier": "^1.11.1",
-    "standard-version": "^4.0.0",
+    "standard-version": "^8.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.5.0"
   },
